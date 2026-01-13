@@ -1,7 +1,7 @@
 # Instructions for AWS app deployment - Challenge 1 
 
 ## Key pairs and User Folder
-    1. Search for EC2 on the AWS console. There is a resource tab in the EC2 where you have to select key pairs and create a new key pair, with a naming convention that is familiar and easy to find, for example: 
+    Search for EC2 on the AWS console. There is a resource tab in the EC2 where you have to select key pairs and create a new key pair, with a naming convention that is familiar and easy to find, for example: 
 ```
 se-name-key-pair
 ```
