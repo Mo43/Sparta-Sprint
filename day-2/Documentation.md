@@ -1,14 +1,12 @@
 # Instructions for AWS app deployment - Challenge 1 
 
 ## Key pairs and User Folder
-    1. Search for EC2 on the AWS console. There is a resource tab in the EC2 where you have to select key pairs and create a new key pair, with a naming convention that is familiar and easy to find, for example: 
-```
-se-name-key-pair
-```
+    1. Search for EC2 on the AWS console. There is a resource tab in the EC2 where you have to select key pairs and create a new key pair, with a naming convention that is familiar and easy to find, for example:
+    se-name-key-pair
+
     Once the private key is made it will be automatically downloaded to your computer. Once it is downloaded you have to add it to your .ssh folder in your user folder and if the folder does not exist in your user folder you can create a folder called .ssh, for example:
-``` 
-$cd C:\\Users\\matta\\.ssh
-``` 
+    $cd C:\\Users\\matta\\.ssh
+
 ## Launching an Instance
     3. Click on the Launch Instance button on the EC2 dashboard and configure this page with the following steps:
 
