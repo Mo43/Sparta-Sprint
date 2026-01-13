@@ -23,7 +23,7 @@ $cd C:\\Users\\matta\\.ssh
     Network settings: For the network settings tab, first you have to click edit and change the security group name and description to the standard naming convention like explained in step 1 and 3. 
 
     In the network settings tab, you should add 3 different security group rules and it should look like this:
-    ![This is an alt text.](group%20rules.png "This is a sample image.")
+    ![This is an alt text.](grouprules. "This is a sample image.")
 
 
 
