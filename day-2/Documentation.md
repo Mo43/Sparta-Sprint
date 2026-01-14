@@ -1,4 +1,4 @@
-# Instructions for AWS app deployment - Challenge 1 
+# Instructions for AWS App Deployment - Challenge 1 
 
 ## Key pairs and User Folder
 
@@ -12,7 +12,7 @@
     $cd C:\\Users\\matta\\.ssh
 
 ## Launching an Instance
-    3. Click on the Launch Instance button on the EC2 dashboard and configure this page with the following steps:
+    4. Click on the Launch Instance button on the EC2 dashboard and configure this page with the following steps:
 
     Name and Tags: follow a naming convention like this se-name-server
 
@@ -22,10 +22,10 @@
 
     Key pair (login): this should be the keypair which was assigned initally in step 1.
 
-    Network settings: For the network settings tab, first you have to click edit and change the security group name and description to the standard naming convention like explained in step 1 and 3. 
+    Network settings: For the network settings tab, first you have to click edit and change the security group name and description to the standard naming convention like explained in step 1 and 4.
 
     In the network settings tab, you should add 3 different security group rules and it should look like this:
-    ![This is an alt text.](grouprules. "This is a sample image.")
+    ![Group Rules](group%20rules.png)
 
 
 
