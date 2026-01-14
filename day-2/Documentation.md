@@ -31,12 +31,12 @@
 
 ## Connecting to the Instance
     5. Now you can click on launch instance and you will be presented with an instance code.
-    ![PNG2](png2%20.png)
+![PNG2](png2.png)
 
     After you click on the instance code you will have a screen with the instance summary 
     where you can see that the instance state that you have created and that it is 
     successfully running.
-    ![Running](running%20.png)
+![Running](running.png)
 
     Then on the instance summary page you need to select the connect button where you will be presented with instructions in order to connect to the instance. 
 
@@ -73,7 +73,7 @@
     might not load so click the link and remove the s from https in order to access the 
     webserver. 
 
-    link image
+![Link](link.png)
 
 ## Transferring zip file
     6. Download the app folder from github and save it in a folder.
@@ -90,12 +90,13 @@
     7. Install dedicated version for NodeJS depending on the application through gitbash.
 
 ## Install App 
-
     8. Using CD you are then able to install the app by navigating to app folder in the application using the 'npm install' command on linux.
 
 ## Run the App
-
     9. Use command 'npm start app.js' to deply the app
+
+## Port
+    10. Once you are on your webserver you can add the port :3000 at the end in order to access your application page.
 
 
 
