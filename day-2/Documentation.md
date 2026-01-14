@@ -25,7 +25,7 @@
     Network settings: For the network settings tab, first you have to click edit and change the security group name and description to the standard naming convention like explained in step 1 and 4.
 
     In the network settings tab, you should add 3 different security group rules and it should look like this:
-   ![Group Rules](day-2/group%20rules.png)
+  ![Group Rules](group%20rules.png)
 
 
 
