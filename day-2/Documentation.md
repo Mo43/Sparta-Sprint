@@ -42,7 +42,7 @@
 
     Now you are ready to connect to your instance through your computer. You have to open gitbash,and navigate to your directory where you stored the private key.
     
-    In my case it was “C:\\Users\\matta\\.ssh”. Using the cd command.
+    For example: “C:\\Users\\matta\\.ssh”. 
 
     Follow the instructions in order to connect to your instance on the aws website. Click the SSH client, you have to run 2 commands from the ssh section on aws website.
 
@@ -51,7 +51,6 @@
     You can use nano to do this: 'sudo nano deploy-nginx.sh' and copy the script into this file and save it.
 
     Script: 
-    
     \#\!/bin/bash  
     \# This script deploys an Nginx server using Docker.  
       
@@ -69,6 +68,38 @@
       
     \#enable nginx \- make it a startup process for the os  
     sudo systemctl enable nginx  
+
+    You can use this link in order to access the webserver and when you are on the page it 
+    might not load so click the link and remove the s from https in order to access the 
+    webserver. 
+
+    link image
+
+## Transferring zip file
+    6. Download the app folder from github and save it in a folder.
+
+    Open a new gitbash file and navigate to the folder you installed the app in and use the command '$ scp \-i \~/.ssh/se-mab-key-pair.pem ./nodejs20-se-test-app-2025.zip ubuntu@34.252.216.212:\~'
+
+    Now if you do ls command you can see that the application file has now been added to your instance 
+
+    Next you have to install unzip and the command for that is sudo apt install unzip and you do this on the ubuntu instance gitbash.
+
+    Then you have to unzip and write the name of your folder on the command line. 'unzip nodejs.zip'
+
+ ## Install NodeJS
+    7. Install dedicated version for NodeJS depending on the application through gitbash.
+
+## Install App 
+
+    8. Using CD you are then able to install the app by navigating to app folder in the application using the 'npm install' command on linux.
+
+## Run the App
+
+    9. Use command 'npm start app.js' to deply the app
+
+
+
+   
     
 
 
