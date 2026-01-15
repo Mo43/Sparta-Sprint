@@ -25,18 +25,18 @@
     Network settings: For the network settings tab, first you have to click edit and change the security group name and description to the standard naming convention like explained in step 1 and 4.
 
     In the network settings tab, you should add 3 different security group rules and it should look like this:
-  ![Group Rules](group%20rules.png)
+  ![Group Rules](images/group%20rules.png)
     
     You leave storage settings and advanced details sections as default.
 
 ## Connecting to the Instance
     5. Now you can click on launch instance and you will be presented with an instance code.
-![PNG2](png2.png)
+![PNG2](images/png2.png)
 
     After you click on the instance code you will have a screen with the instance summary 
     where you can see that the instance state that you have created and that it is 
     successfully running.
-![Running](running.png)
+![Running](images/running.png)
 
     Then on the instance summary page you need to select the connect button where you will be presented with instructions in order to connect to the instance. 
 
@@ -73,7 +73,7 @@
     might not load so click the link and remove the s from https in order to access the 
     webserver. 
 
-![Link](link.png)
+![Link](images/link.png)
 
 ## Transferring zip file
     6. Download the app folder from github and save it in a folder.
@@ -97,6 +97,144 @@
 
 ## Port
     10. Once you are on your webserver you can add the port :3000 at the end in order to access your application page.
+
+# Database Implementation - Challenge 2
+
+step 1: 
+
+Port 27017 new instance rule 
+
+Do all the terminal stuff 
+
+Sudo apt install gnupg curl -y
+
+step 2: 
+
+after gnup curl
+curl -fsSL https://www.mongodb.org/static/pgp/server-7.0.asc | \
+   sudo gpg -o /usr/share/keyrings/mongodb-server-7.0.gpg \
+   --dearmor
+
+step 3: 
+sudo apt update -y
+
+step 4: 
+echo "deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb-server-7.0.gpg ] https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/7.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-7.0.list
+
+step 5: 
+sudo apt update
+
+step 6:
+sudo apt install -y mongodb-org=7.0.6 mongodb-org-database=7.0.6 mongodb-org-server=7.0.6 mongodb-mongosh=2.1.5 mongodb-org-mongos=7.0.6 mongodb-org-tools=7.0.6
+
+step 7: 
+cd /etc
+
+step 8: 
+sudo nano mongod.conf - enter file and edit bindip to 0.0.0.0
+
+step 9: 
+sudo systemctl restart mongod
+
+step 10: 
+cd 
+
+step 11: 
+sudo systemctl start mongod
+
+step 12: 
+sudo systemctl status mongod - should be green 
+
+
+
+
+
+
+
+
+
+
+next step:  
+creating database: 
+running script and populating database: 
+
+## Create an instance
+    Create new instance and use the settings in the image below to create an instance. 
+![Group Rules](images/group%20rules.png)
+
+## Connect to Instance
+    Once instance is created connect to the instance using the image below: 
+![Connect](images/connect.png)
+
+    Run these commands in Gitbash in order to connect to your instance. 
+
+## Running the script
+    download the script or copy: 
+
+
+
+
+connect to instance using git bash 
+use nano to run the new script app-deploy.sh
+
+ export DB_Host=mongodb://-DB-IP-ADDRESS:27017/posts
+
+- pm2 kill 
+
+- cd into app
+
+- node seeds/seed.js
+
+
+# day 4 
+
+relaunch instances for db 
+
+connect to db instance through bash 
+
+launch database script deploy-mongo.sh
+
+database is now active
+
+
+relaunce instace for app 
+connect to in gitbash using commands for console
+
+launch script app-deploy.sh
+
+app should be running correctly as well
+
+# Monitoring Challenge
+
+### How to setup Detailed Monitoring
+    1. Log in to AWS Management Console
+    2. Navigate to Instance and find your App Instance
+    3. Find Monitoring Tab
+    4. click on manage monitoring and enable it 
+    4. click on 3 dots and select add to dashboard
+    5. you can create a new dashboard name for eg se-mab-test-dashboard
+    6. Click on Save to save all the graphs and show the dashboard.
+![alt text](images/image-4.png)
+
+## How to create a CPU Usage alarm
+    7. In Cloudwatch, navigate to Alarms
+    8. Click Create Alarm
+    9. Select Metric: EC2 > Per-Instance Metrics > CPUtilisation
+    10. Define alarm conditions
+        - Threshold: > 70%
+        - Period: 1 minute
+        - Evaluation: 1 
+    11. Create new topic 'cpu-alert-topic'
+        - add email address to your email
+    12. Created the Alarm
+    13. use command 'yes > /dev/null &' to create processes in the cpu to cause the alarm to run and use command 'killall yes' in order to stop the procceses
+
+    13. email of the alarm being set off. 
+![alt text](images/image.png)
+
+
+
+
 
 
 
