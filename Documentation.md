@@ -93,7 +93,7 @@
     8. Using CD you are then able to install the app by navigating to app folder in the application using the 'npm install' command on linux.
 
 ## Run the App
-    9. Use command 'npm start app.js' to deply the app
+    9. Use command 'npm start app.js' to deploy the app
 
 ## Port
     10. Once you are on your webserver you can add the port :3000 at the end in order to access your application page.
