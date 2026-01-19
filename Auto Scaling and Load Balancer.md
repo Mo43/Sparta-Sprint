@@ -29,11 +29,13 @@ pm2 start app.js
 
 ## Instance templates and Launching an instance template
 - First step for this section is to create a new instance template
+
 ![alt text](<images/instance template.png>)
 
 ![alt text](<images/Screenshot 2026-01-19 123055.png>)
 
 - In advanced settings add the script
+
 ```
 #!/bin/bash
 
@@ -58,9 +60,10 @@ pm2 start app.js
 ## Auto Scaling
 
 - Now if you go to Auto Scaling groups and create Auto Scaling Group
+
 ![alt text](images/ss.png)
 
-![alt text](newimg.png)
+![alt text](images/newimg.png)
 
 ![alt text](<images/Screenshot 2026-01-19 123852.png>)
 
@@ -72,9 +75,12 @@ pm2 start app.js
 
 - Copy the DNS name and add /posts at the end in order to see your web app and database
 
-![alt text](image.png)
-![alt text](image-1.png)
-![alt text](image-2.png)
+![alt text](images/image.png)
+
+![alt text](images/image-1.png)
+
+![alt text](images/image-2.png)
+
 
 - Finished
 
